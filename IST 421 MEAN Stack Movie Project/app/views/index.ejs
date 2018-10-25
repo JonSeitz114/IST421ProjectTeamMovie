@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+</head>
+<body>
+<h1><%= title %></h1>
+<script type="text/javascript">
+	var objspan = document.createElement("span")
+	objspan.style.display="block";
+	objspan.style.display="200%";
+	objspan.innerHTML = "Congratulations Jonathan Seitz on creating your first Express application";
+	document.body.appendChild(objspan);
+	</script>
+<% if ( userFullName ) { %>
+<h2>Hello <%=userFullName%> </h2>
+<a href="/signout">Sign out</a>
+<% } else { %>
+<h2><a href="/signup">Signup</a></h2>
+<h2><a href="/signin">Signin</a></h2>
+<% } %>
+</body>
+</html>
