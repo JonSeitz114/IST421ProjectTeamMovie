@@ -5,7 +5,7 @@ console.log(req.session.lastVisit);
 
 req.session.lastVisit = new Date();
 res.render('index', {
-title: 'Hello World',
+title: 'Hello fellow movie lover!',
 userFullName: req.user ? req.user.fullName : ''
 });
 };
