@@ -5,7 +5,7 @@ MongoClient = require('mongodb').MongoClient;
 
 
 module.exports = function() {
-var db = mongoose.connect(config.db, {useNewUrlParser: true}).then(
+var db = mongoose.connect(config.db, {useCreateIndex: true, useNewUrlParser: true}).then(
  (res) => {
    console.log("Connected to Database Successfully.")
   }
