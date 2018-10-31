@@ -10,7 +10,7 @@
 	var objspan = document.createElement("span")
 	objspan.style.display="block";
 	objspan.style.display="200%";
-	objspan.innerHTML = "Congratulations Jonathan Seitz on creating your first Express application";
+	objspan.innerHTML = "This is your space to sort out and save your list of movies you want to put into a collection.";
 	document.body.appendChild(objspan);
 	</script>
 <% if ( userFullName ) { %>
@@ -19,16 +19,36 @@
 <% } else { %>
 <h2><a href="/signup">Signup</a></h2>
 <h2><a href="/signin">Signin</a></h2>
-<h2><a href="/movies">Go To Your Movie Collection</a></h2>
 <% } %>
 
 <section ng-view></section>
 
 <section>
-<input type="text" id="text1" ng-model="firstname">
-<input type="text" id="text2" ng-model="firstname">
-<input type="text" id="text3" ng-model="lastname">
-<input type="text" id="text4" ng-model="lastname">
+<div class="container">
+  <h1>Movie Collection List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date Of Release</th>
+        <th>Genre</th>
+		<th>Actors</th>
+		<th>Runtime</th>
+		<th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </section>
 
 <script type="text/javascript"
