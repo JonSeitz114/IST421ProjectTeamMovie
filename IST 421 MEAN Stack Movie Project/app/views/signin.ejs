@@ -1,16 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <title>
 <%=title %>
 </title>
 <style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #DC143C;
+  position: relative;
+}
+section{
+	background-color: tan;
+}
+
+.colorgraph {
+  height: 10px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+footer{
+	position: fixed;
+    left: 0;
+	right: 0;
+    bottom: 0;
+	padding: 1rem;
+    width: 100%;
+    background-color: #3d52ad;
+    color: #e6ffff;
+    text-align: center;
+}
+
+.form-heading { color:#fff; font-size:30px;}
+.panel h2{ color:#444444; font-size:20px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:16px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+  background: #F8F8FF none repeat scroll 0 0;
+  border: 1px solid #8B4513;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+.main-div {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 38%;
+  padding: 50px 70px 70px 71px;
+}
+
+div.panel {
+	background-color: #FFF5EE;
+}
+
+.forgot {
+  text-align: left; margin-bottom:30px;
+}
+
+.forgot a {
+  color: #777777;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.login-form .form-group {
+  margin-bottom:10px;
+}
+.login-form{ 
+text-align:center;
+}
+.login-form  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+.botto-text {
+  color: black;
+  font-size: 14px;
+  margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+  background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
 </style>
 </head>
+<header>
+	<title>Signin Page</title>
+</header>
 <body>
 <% for(var i in messages) { %>
 <div class="flash"><%= messages[i] %></div>
 <% } %>
+<div class="container">
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Sign in page</h2>
+   </div>
 <form action="/signin" method="post">
 <div>
 <label>Username:</label>
@@ -24,5 +132,10 @@
 <input type="submit" value="Sign In" />
 </div>
 </form>
+    </div>
+</div></div></div>
 </body>
+<footer>
+<p><a href="terms.html" style="color:white">Terms Of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="help.html" style="color:white">Help</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="policy.html" style="color:white">Privacy Policy</a></p>
+</footer>
 </html>
