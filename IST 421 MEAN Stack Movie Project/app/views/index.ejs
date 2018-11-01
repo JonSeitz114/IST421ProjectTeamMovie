@@ -15,26 +15,91 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ff6666;
+  background-color: #ADD8E6;
   height: 100vh;
   position: relative;
 }
 section.textbox{
 	background-color: tan;
+	padding: 2px;
+}
+div.loginbox{
+	
+}
+
+.image-anchor{
+	width: auto; 
+	height: auto;
+	object-fit: cover;
+}
+
+.imageclass1{
+	float: right;
+	width: 400px;
+	height: 275px;
+	padding: 10px;
+}
+
+.imageclass2{
+	float: left;
+	width: 300px;
+	height: 260px;
+}
+
+.imageclass3{
+	position: absolute;
+}
+
+form.brought{
+	text-align: center;
+	border-style: double;
+	padding: 5px;
 }
 
 footer{
-	position: fixed;
-	padding: 1rem;
+	padding: 5px;
     width: 100%;
-    background-color: teal;
-    color: #e6ffff;
+    background-color: #FF4500;
+    color: blue;
     text-align: center;
+	position: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
 }
 
 mark {
     background-color: yellow;
     color: blue;
+}
+
+.bottom-image{
+	padding: 20px;
+}
+
+.textbox{
+	padding: 20px;
 }
 
 .form-heading { color:#fff; font-size:30px;}
@@ -102,17 +167,23 @@ text-align:center;
 	<title>Homepage</title>
 </header>
 <body>
-<h1><%= title %></h1>
+<h1><mark><%= title %></mark></h1>
+<br/>
 <script type="text/javascript">
 	var objspan = document.createElement("span")
 	objspan.style.display="block";
 	objspan.style.display="200%";
-	objspan.innerHTML = "Congratulations Jonathan Seitz on creating your first Express application";
+	objspan.innerHTML = "Congratulations user on find your way to this appllication!";
 	document.body.appendChild(objspan);
 	</script>
+<br/>
 <% if ( userFullName ) { %>
-<h2><mark>Hello <%=userFullName%></mark></h2>
-<a href="/signout">Sign out</a>
+<h2>Hello <%=userFullName%></h2>
+<ul>
+<li><h3><a href="/signout">Sign out</a></h3></li>
+<li><h3><a href="/movies">Go To Your Movie Collection</a></h3></li>
+</ul>
+<br/>
 <% } else { %>
 <ul>
 <li><h2><a href="/signup">Signup</a></h2></li>
@@ -121,8 +192,8 @@ text-align:center;
 </ul>
 <% } %>
 
-<section ng-view></section>
 
+<section ng-view></section>
 <section class="textbox">
 <input type="text" id="text1" ng-model="firstname">
 <input type="text" id="text2" ng-model="firstname">
@@ -130,28 +201,29 @@ text-align:center;
 <input type="text" id="text4" ng-model="lastname">
 </section>
 
-<script type="text/javascript"
-src="/lib/angular/angular.js"></script>
+<form class="brought"><mark>This application was created using MEAN stack</mark></form>
+
+<section class="images">
+	<div class="bottom-image">
+		<a class="image-anchor"><img class="imageclass1" src="http://clipartmag.com/images/movie-clipart-30.jpg" />
+		<a class="image-anchor"><img class="imageclass2" src="http://clipart-library.com/image_gallery/342984.png" />
+		<a class="image-anchor"><img class="imageclass3" src="http://i2.wp.com/blog.adeel.io/wp-content/uploads/2016/11/mean-stack.png?fit=640%2C296&w=640" />
+	</div>
+</section>
+
+
+<script type="text/javascript" src="/lib/angular/angular.js"></script>
 
 <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
 
-<script type="text/javascript"
-src="/example/example.client.module.js"></script>
+<script type="text/javascript"src="/example/example.client.module.js"></script>
 
-<script type="text/javascript"
-src="/example/controllers/example.client.controller.js">
-</script>
+<script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
 
 <script type="text/javascript" src="/application.js">
 </script>
-
 </body>
-	<div>
-		<center>
-		<a><img src="http://clipartmag.com/images/movie-clipart-30.jpg" width="auto" height="auto" />
-		</center>
-	</div>
-<footer>
-<p><a href="terms.html" style="color:white">Terms Of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="help.html" style="color:white">Help</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="policy.html" style="color:white">Privacy Policy</a></p>
-</footer>
+<!-- <footer> position is broken
+<p>This application was created using the MEAN Stack.</p>
+</footer> -->
 </html>
