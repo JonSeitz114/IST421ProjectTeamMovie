@@ -15,7 +15,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #00FFFF;
+  background-color: #ff6666;
   height: 100vh;
   position: relative;
 }
@@ -25,14 +25,16 @@ section.textbox{
 
 footer{
 	position: fixed;
-    left: 0;
-	right: 0;
-    bottom: 0;
 	padding: 1rem;
     width: 100%;
-    background-color: #3d52ad;
+    background-color: teal;
     color: #e6ffff;
     text-align: center;
+}
+
+mark {
+    background-color: yellow;
+    color: blue;
 }
 
 .form-heading { color:#fff; font-size:30px;}
@@ -109,12 +111,14 @@ text-align:center;
 	document.body.appendChild(objspan);
 	</script>
 <% if ( userFullName ) { %>
-<h2>Hello <%=userFullName%> </h2>
+<h2><mark>Hello <%=userFullName%></mark></h2>
 <a href="/signout">Sign out</a>
 <% } else { %>
-<h2><a href="/signup">Signup</a></h2>
-<h2><a href="/signin">Signin</a></h2>
-<h2><a href="/movies">Go To Your Movie Collection</a></h2>
+<ul>
+<li><h2><a href="/signup">Signup</a></h2></li>
+<li><h2><a href="/signin">Signin</a></h2></li>
+<li><h2><a href="/movies">Go To Your Movie Collection</a></h2></li>
+</ul>
 <% } %>
 
 <section ng-view></section>
@@ -142,6 +146,11 @@ src="/example/controllers/example.client.controller.js">
 </script>
 
 </body>
+	<div>
+		<center>
+		<a><img src="http://clipartmag.com/images/movie-clipart-30.jpg" width="auto" height="auto" />
+		</center>
+	</div>
 <footer>
 <p><a href="terms.html" style="color:white">Terms Of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="help.html" style="color:white">Help</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="policy.html" style="color:white">Privacy Policy</a></p>
 </footer>
