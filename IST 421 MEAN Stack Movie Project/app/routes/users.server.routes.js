@@ -17,10 +17,6 @@ failureFlash: true
 
 app.get('/signout', users.signout);
 
-app.route('/movies')
-.get(users.read);
-
-
 app.route('/users')
 .post(users.create)
 .get(users.list);

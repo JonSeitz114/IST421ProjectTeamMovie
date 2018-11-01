@@ -11,3 +11,5 @@ var MovieSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Movie', MovieSchema);
+app.route('/movies')
+.get(Movie.read);
