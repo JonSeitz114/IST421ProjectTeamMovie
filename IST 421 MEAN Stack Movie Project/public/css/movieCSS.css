@@ -1,34 +1,92 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #DC143C;
+  background-color: #ADD8E6;
   height: 100vh;
   position: relative;
 }
-section{
-	background-color: #F08080;
+section.textbox{
+	background-color: tan;
+	padding: 2px;
+}
+div.loginbox{
+	
 }
 
-.colorgraph {
-  height: 10px;
-  border-top: 0;
-  background: #c4e17f;
-  border-radius: 5px;
-  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+.image-anchor{
+	width: auto; 
+	height: auto;
+	object-fit: cover;
 }
+
+.imageclass1{
+	float: right;
+	width: 400px;
+	height: 275px;
+	padding: 10px;
+}
+
+.imageclass2{
+	float: left;
+	width: 300px;
+	height: 275px;
+	padding: 10px;
+}
+
+.imageclass3{
+	position: absolute;
+}
+
+form.brought{
+	text-align: center;
+	border-style: double;
+	padding: 5px;
+}
+
 footer{
-	position: fixed;
-    left: 0;
-	right: 0;
-    bottom: 0;
-	padding: 1rem;
+	padding: 5px;
     width: 100%;
-    background-color: #3d52ad;
-    color: #e6ffff;
+    background-color: #FF4500;
+    color: blue;
     text-align: center;
+	position: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+mark {
+    background-color: yellow;
+    color: blue;
+}
+
+.bottom-image{
+	padding: 20px;
+}
+
+.textbox{
+	padding: 20px;
 }
 
 .form-heading { color:#fff; font-size:30px;}
