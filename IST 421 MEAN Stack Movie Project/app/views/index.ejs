@@ -178,8 +178,8 @@ text-align:center;
 	document.body.appendChild(objspan);
 	</script>
 <br/>
-<% if ( userFullName ) { %>
-<h2>Hello <%=userFullName%></h2>
+<% if ( user ) { %>
+<h2>Hello <%=user%></h2>
 <ul>
 <li><h3><a href="/signout">Sign out</a></h3></li>
 <li><h3><a href="/movies">Go To Your Movie Collection</a></h3></li>
@@ -194,12 +194,12 @@ text-align:center;
 
 
 <section ng-view></section>
-<section class="textbox">
-<input type="text" id="text1" ng-model="firstname">
-<input type="text" id="text2" ng-model="firstname">
-<input type="text" id="text3" ng-model="lastname">
-<input type="text" id="text4" ng-model="lastname">
-</section>
+
+
+<script type="text/javascript">
+	window.user = <%- user || 'null' %>;
+</script>
+
 
 <form class="brought"><mark>This application was created using MEAN stack</mark></form>
 

@@ -6,6 +6,6 @@ console.log(req.session.lastVisit);
 req.session.lastVisit = new Date();
 res.render('index', {
 title: 'Hello fellow movie lover!',
-userFullName: req.user ? req.user.fullName : ''
+user: req.user ? req.user.fullName : '',
 });
 };
