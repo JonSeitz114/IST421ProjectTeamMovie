@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html xmlns:ng="http://angularjs.org">
 <html>
@@ -11,10 +12,38 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <title><%= title %></title>
+=======
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @JonSeitz114 Sign out
+0
+0 0 JonSeitz114/IST421ProjectTeamMovie
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+IST421ProjectTeamMovie/IST 421 MEAN Stack Movie Project/app/views/movies.ejs
+912484a  3 hours ago
+@JonSeitz114 JonSeitz114 Movie .ejs update
+     
+157 lines (142 sloc)  4.12 KB
+@@ -1,158 +0,0 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+<title><%= title %></title>
+</head>
+<body>
+<h1><%= title %></h1>
+>>>>>>> b861db63b4b4841331b9a5b0bb330267d666701e
 <style type="text/css">
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   background-color: #ADD8E6;
   height: 100vh;
   position: relative;
@@ -103,6 +132,25 @@ mark {
 	padding: 20px;
 }
 
+=======
+  background-color: #DC143C;
+  height: 100vh;
+  position: relative;
+}
+section{
+	background-color: #F08080;
+}
+.colorgraph {
+  height: 10px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+>>>>>>> b861db63b4b4841331b9a5b0bb330267d666701e
 .form-heading { color:#fff; font-size:30px;}
 .panel h2{ color:#444444; font-size:20px; margin:0 0 8px 0;}
 .panel p { color:#777777; font-size:16px; margin-bottom:30px; line-height:24px;}
@@ -121,6 +169,7 @@ mark {
   max-width: 38%;
   padding: 50px 70px 70px 71px;
 }
+<<<<<<< HEAD
 
 div.panel {
 	background-color: #FFF5EE;
@@ -130,12 +179,23 @@ div.panel {
   text-align: left; margin-bottom:30px;
 }
 
+=======
+div.panel {
+	background-color: #FFF5EE;
+}
+.forgot {
+  text-align: left; margin-bottom:30px;
+}
+>>>>>>> b861db63b4b4841331b9a5b0bb330267d666701e
 .forgot a {
   color: #777777;
   font-size: 14px;
   text-decoration: underline;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b861db63b4b4841331b9a5b0bb330267d666701e
 .login-form .form-group {
   margin-bottom:10px;
 }
@@ -163,6 +223,7 @@ text-align:center;
 .back { text-align: left; margin-top:10px;}
 .back a {color: #444444; font-size: 13px;text-decoration: none;}
 </style>
+<<<<<<< HEAD
 </head>
 <header>
 	<title>Homepage</title>
@@ -170,10 +231,13 @@ text-align:center;
 <body>
 <h1><mark><%= title %></mark></h1>
 <br/>
+=======
+>>>>>>> b861db63b4b4841331b9a5b0bb330267d666701e
 <script type="text/javascript">
 	var objspan = document.createElement("span")
 	objspan.style.display="block";
 	objspan.style.display="200%";
+<<<<<<< HEAD
 	objspan.innerHTML = "Congratulations user on find your way to this appllication!";
 	document.body.appendChild(objspan);
 	</script>
@@ -227,3 +291,67 @@ text-align:center;
 <p>This application was created using the MEAN Stack.</p>
 </footer> -->
 </html>
+=======
+	objspan.innerHTML = "This is your space to sort out and save your list of movies you want to put into a collection.";
+	document.body.appendChild(objspan);
+	</script>
+<a href="/signout">Sign out</a>
+<% } else { %>
+<h2><a href="/signup">Signup</a></h2>
+<h2><a href="/signin">Signin</a></h2>
+<% } %>
+
+<section ng-view></section>
+
+<section>
+<div class="container">
+  <h1>Movie Collection List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date Of Release</th>
+        <th>Genre</th>
+		<th>Actors</th>
+		<th>Runtime</th>
+		<th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<script type="text/javascript"
+src="/lib/angular/angular.js"></script>
+
+<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+
+<script type="text/javascript"
+src="/example/example.client.module.js"></script>
+
+<script type="text/javascript"
+src="/example/controllers/example.client.controller.js">
+</script>
+
+<script type="text/javascript" src="/application.js">
+</script>
+
+	<div>
+		<center>
+		<a><img src="http://clipartmag.com/images/movie-clipart-30.jpg" class="imageplace" />
+		</center>
+	</div>
+
+</body>
+</html>
+>>>>>>> b861db63b4b4841331b9a5b0bb330267d666701e
