@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title><%= title %></title>
+<style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ADD8E6;
+  height: 100vh;
+  position: relative;
+}
+section.textbox{
+	background-color: tan;
+	padding: 2px;
+}
+div.loginbox{
+	
+}
+
+.image-anchor{
+	width: auto; 
+	height: auto;
+	object-fit: cover;
+}
+
+.imageclass1{
+	float: right;
+	width: 400px;
+	height: 275px;
+	padding: 10px;
+}
+
+.imageclass2{
+	float: left;
+	width: 300px;
+	height: 275px;
+	padding: 10px;
+}
+
+.imageclass3{
+	position: absolute;
+}
+
+form.brought{
+	text-align: center;
+	border-style: double;
+	padding: 5px;
+}
+
+footer{
+	padding: 5px;
+    width: 100%;
+    background-color: #FF4500;
+    color: blue;
+    text-align: center;
+	position: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+mark {
+    background-color: yellow;
+    color: blue;
+}
+
+.bottom-image{
+	padding: 20px;
+}
+
+.textbox{
+	padding: 20px;
+}
+
+.form-heading { color:#fff; font-size:30px;}
+.panel h2{ color:#444444; font-size:20px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:16px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+  background: #F8F8FF none repeat scroll 0 0;
+  border: 1px solid #8B4513;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+.main-div {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 38%;
+  padding: 50px 70px 70px 71px;
+}
+
+div.panel {
+	background-color: #FFF5EE;
+}
+
+.forgot {
+  text-align: left; margin-bottom:30px;
+}
+
+.forgot a {
+  color: #777777;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.login-form .form-group {
+  margin-bottom:10px;
+}
+.login-form{ 
+text-align:center;
+}
+.login-form  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+.botto-text {
+  color: black;
+  font-size: 14px;
+  margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+  background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+</style>
+</head>
+<header>
+	<title>Homepage</title>
+</header>
+<body>
+<h1><mark><%= title %></mark></h1>
+<br/>
+<script type="text/javascript">
+	var objspan = document.createElement("span")
+	objspan.style.display="block";
+	objspan.style.display="200%";
+	objspan.innerHTML = "Congratulations user on find your way to this appllication!";
+	document.body.appendChild(objspan);
+	</script>
+<br/>
+<% if ( user ) { %>
+<h2>Hello <%=user%></h2>
+<ul>
+<li><h3><a href="/signout">Sign out</a></h3></li>
+<li><h3><a href="/movies">Go To Your Movie Collection</a></h3></li>
+</ul>
+<br/>
+<% } else { %>
+<ul>
+<li><h2><a href="/signup">Signup</a></h2></li>
+<li><h2><a href="/signin">Signin</a></h2></li>
+</ul>
+<% } %>
+
+
+<section ng-view></section>
+
+
+<script type="text/javascript">
+	window.user = <%- user || 'null' %>;
+</script>
+
+
+<form class="brought"><mark>This application was created using MEAN stack</mark></form>
+
+<section class="images">
+	<div class="bottom-image">
+		<a class="image-anchor"><img class="imageclass1" src="http://clipartmag.com/images/movie-clipart-30.jpg" />
+		<a class="image-anchor"><img class="imageclass2" src="http://clipartmag.com/images/movie-clipart-30.jpg" />
+		<a class="image-anchor"><img class="imageclass3" src="http://i2.wp.com/blog.adeel.io/wp-content/uploads/2016/11/mean-stack.png?fit=640%2C296&w=640" />
+	</div>
+</section>
+
+
+<script type="text/javascript" src="/lib/angular/angular.js"></script>
+
+<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+
+<script type="text/javascript"src="/example/example.client.module.js"></script>
+
+<script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
+
+<script type="text/javascript" src="/application.js">
+</script>
+</body>
+<!-- <footer> position is broken
+<p>This application was created using the MEAN Stack.</p>
+</footer> -->
+</html>
