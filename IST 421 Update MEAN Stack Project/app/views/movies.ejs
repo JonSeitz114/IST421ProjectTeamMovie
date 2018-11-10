@@ -5,7 +5,7 @@
 <title><%= title %></title>
 </head>
 <body>
-<h1><mark><%= title %></mark></h1>
+<h1><%= title %></h1>
 <style type="text/css">
 body {
   margin: 0;
@@ -17,6 +17,9 @@ body {
 section.textbox{
 	background-color: tan;
 	padding: 2px;
+}
+div.loginbox{
+
 }
 
 .image-anchor{
@@ -32,8 +35,15 @@ section.textbox{
 	padding: 10px;
 }
 
+.imageclass2{
+	float: left;
+	width: 300px;
+	height: 275px;
+	padding: 10px;
+}
+
 .imageclass3{
-	position: left;
+	position: absolute;
 }
 
 form.brought{
@@ -152,35 +162,45 @@ text-align:center;
 	var objspan = document.createElement("span")
 	objspan.style.display="block";
 	objspan.style.display="200%";
-	objspan.innerHTML = "Congratulations on finding your way to this movie application prototype.";
+	objspan.innerHTML = "Congratulations Jonathan Seitz on creating your first Express application";
 	document.body.appendChild(objspan);
 	</script>
-<br/>
 <% if ( userFullName ) { %>
 <h2>Hello <%=userFullName%> </h2>
-<ul>
-	<li><h3><a href="/signout">Sign out</a></h3></li>
-	<li><h3><a href="/movies">Go To Your Movie Collection (Coming Soon)</a></h3></li>
-</ul>
-
+<a href="/signout">Sign out</a>
 <% } else { %>
-<h2>To sign in and access the Movies library, click on Signin.</h2>
-<h2>If you have not created an account yet, click on Signup.</h2>
-<ul>
-	<li><h2><a href="/signup">Signup</a></h2></li>
-	<li><h2><a href="/signin">Signin</a></h2></li>
-</ul>
+<h2><a href="/signup">Signup</a></h2>
+<h2><a href="/signin">Signin</a></h2>
 <% } %>
 
 <section ng-view></section>
 
-<form class="brought"><mark>This application was created using MEAN stack</mark></form>
-
-<section class="images">
-	<div class="bottom-image">
-		<a class="image-anchor"><img class="imageclass1" src="http://clipartmag.com/images/movie-clipart-30.jpg" />
-				<a class="image-anchor"><img class="imageclass3" src="http://i2.wp.com/blog.adeel.io/wp-content/uploads/2016/11/mean-stack.png?fit=640%2C296&w=640" />
-	</div>
+<section>
+<div class="container">
+  <h1>Movie Collection List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date Of Release</th>
+        <th>Genre</th>
+		<th>Actors</th>
+		<th>Runtime</th>
+		<th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </section>
 
 <script type="text/javascript"
