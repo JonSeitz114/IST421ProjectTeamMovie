@@ -1,0 +1,159 @@
+@@ -1,158 +0,0 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+<title><%= title %></title>
+</head>
+<body>
+<h1><%= title %></h1>
+<style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #DC143C;
+  height: 100vh;
+  position: relative;
+}
+section{
+	background-color: #F08080;
+}
+
+.colorgraph {
+  height: 10px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+.form-heading { color:#fff; font-size:30px;}
+.panel h2{ color:#444444; font-size:20px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:16px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+  background: #F8F8FF none repeat scroll 0 0;
+  border: 1px solid #8B4513;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+.main-div {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 38%;
+  padding: 50px 70px 70px 71px;
+}
+
+div.panel {
+	background-color: #FFF5EE;
+}
+
+.forgot {
+  text-align: left; margin-bottom:30px;
+}
+
+.forgot a {
+  color: #777777;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.login-form .form-group {
+  margin-bottom:10px;
+}
+.login-form{ 
+text-align:center;
+}
+.login-form  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+}
+.botto-text {
+  color: black;
+  font-size: 14px;
+  margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+  background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+</style>
+<script type="text/javascript">
+	var objspan = document.createElement("span")
+	objspan.style.display="block";
+	objspan.style.display="200%";
+	objspan.innerHTML = "This is your space to sort out and save your list of movies you want to put into a collection.";
+	document.body.appendChild(objspan);
+	</script>
+<% if ( userFullName ) { %>
+<h2>Hello <%=userFullName%> </h2>
+<a href="/signout">Sign out</a>
+<% } else { %>
+<h2><a href="/signup">Signup</a></h2>
+<h2><a href="/signin">Signin</a></h2>
+<% } %>
+
+<section ng-view></section>
+
+<section>
+<div class="container">
+  <h1>Movie Collection List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date Of Release</th>
+        <th>Genre</th>
+		<th>Actors</th>
+		<th>Runtime</th>
+		<th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td></td>
+        <td></td>
+        <td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<script type="text/javascript"
+src="/lib/angular/angular.js"></script>
+
+<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+
+<script type="text/javascript"
+src="/example/example.client.module.js"></script>
+
+<script type="text/javascript"
+src="/example/controllers/example.client.controller.js">
+</script>
+
+<script type="text/javascript" src="/application.js">
+</script>
+
+	<div>
+		<center>
+		<a><img src="http://clipartmag.com/images/movie-clipart-30.jpg" class="imageplace" />
+		</center>
+	</div>
+
+</body>
+</html>
