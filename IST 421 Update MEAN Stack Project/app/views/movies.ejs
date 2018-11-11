@@ -162,11 +162,11 @@ text-align:center;
 	var objspan = document.createElement("span")
 	objspan.style.display="block";
 	objspan.style.display="200%";
-	objspan.innerHTML = "Congratulations Jonathan Seitz on creating your first Express application";
+	objspan.innerHTML = "Congratulations on finding your way to this movie application prototype.";
 	document.body.appendChild(objspan);
 	</script>
 <% if ( userFullName ) { %>
-<h2>Hello <%=userFullName%> </h2>
+<h2>Welcome to your movie collection <%=userFullName%> </h2>
 <a href="/signout">Sign out</a>
 <% } else { %>
 <h2><a href="/signup">Signup</a></h2>

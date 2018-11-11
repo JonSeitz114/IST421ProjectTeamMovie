@@ -24,7 +24,8 @@ MongoClient.connect(config.db,{ useNewUrlParser: true },function(err,db){
 });
 
 
-require('../app/models/user.server.model');
 
+require('../app/models/user.server.model');
+//require('../app/models/movie.server.model');
 return db;
 };
