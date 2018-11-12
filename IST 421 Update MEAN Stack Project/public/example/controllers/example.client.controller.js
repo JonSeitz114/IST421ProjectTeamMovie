@@ -3,6 +3,6 @@ angular.module('example').controller('ExampleController',
 function($scope) {
 $scope.name1 = 'MEAN Application',
 $scope.name2 = window.user.firstName;
-//$scope.name2 = window.movie.title;
+$scope.name3 = window.movie.title;
 }
 ]);
