@@ -172,6 +172,22 @@ text-align:center;
 </ul>
 <% } %>
 
+<% if ( user ) { %>
+<h2>User information in JSON <%=user%> </h2>
+<ul>
+</ul>
+
+<% } else { %>
+<h2>To sign in and access the Movies library, click on Signin.</h2>
+<h2>If you have not created an account yet, click on Signup.</h2>
+<ul>
+</ul>
+<% } %>
+
+<script type="text/javascript">
+	window.user = <%- user || 'null' %>;
+</script>
+
 <section ng-view></section>
 
 

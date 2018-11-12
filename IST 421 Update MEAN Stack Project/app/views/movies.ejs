@@ -165,42 +165,47 @@ text-align:center;
 	objspan.innerHTML = "Congratulations on finding your way to this movie application prototype.";
 	document.body.appendChild(objspan);
 	</script>
-<% if ( userFullName ) { %>
-<h2>Welcome to your movie collection <%=userFullName%> </h2>
+<% if ( user ) { %>
+<h2>Hello <%=user%> </h2>
 <a href="/signout">Sign out</a>
 <% } else { %>
-<h2><a href="/signup">Signup</a></h2>
-<h2><a href="/signin">Signin</a></h2>
+<a href="/signup">Signup</a>
+<a href="/signin">Signin</a>
 <% } %>
+
+<script type="text/javascript">
+	window.user = <%- user || 'null' %>;
+</script>
+
 
 <section ng-view></section>
 
 <section>
-<div class="container">
-  <h1>Movie Collection List</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Date Of Release</th>
-        <th>Genre</th>
-		<th>Actors</th>
-		<th>Runtime</th>
-		<th>Rating</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let movie of movies">
-        <td></td>
-        <td></td>
-        <td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <div class="container">
+        <h1>Movie Collection List</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date Of Release</th>
+                <th>Genre</th>
+                <th>Actors</th>
+                <th>Runtime</th>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let movie of movies">
+                <td>Title</td>
+                <td>Date Of Release</td>
+                <td>Genre</td>
+                <td>Actors</td>
+                <td>Runtime</td>
+                <td>Rating</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
 
 <script type="text/javascript"

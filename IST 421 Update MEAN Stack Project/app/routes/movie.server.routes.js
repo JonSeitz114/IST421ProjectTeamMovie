@@ -1,6 +1,5 @@
 var movies =
 require('../../app/controllers/movie.server.controller');
-//passport = require('passport');
 
 module.exports = function(app) {
 
