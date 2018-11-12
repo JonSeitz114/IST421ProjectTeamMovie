@@ -1,6 +1,5 @@
 var Movie = require('mongoose').model('Movie');
 
-//passport = require('passport');
 
 exports.create = function(req, res, next) {
 var movie = new Movie(req.body);

@@ -10,6 +10,7 @@ Genre: String,
 Actors: String,
 Runtime: String,
 Rating: String
+});
 
 MovieSchema.set('toJSON', {
 getters: true,
