@@ -160,16 +160,35 @@ text-align:center;
 	objspan.innerHTML = "Congratulations on finding your way to this movie application prototype.";
 	document.body.appendChild(objspan);
 	</script>
+
 <% if ( user ) { %>
-<h2>Hello <%=user%> </h2>
-<a href="/signout">Sign out</a>
+<h2>User information in JSON <%=user%> </h2>
+<ul>
+</ul>
+
 <% } else { %>
-<a href="/signup">Signup</a>
-<a href="/signin">Signin</a>
+<h2>This area will display your user information.</h2>
+<ul>
+</ul>
+<% } %>
+
+<% if ( movie ) { %>
+<h2>Your movie information in JSON <%=movie%> </h2>
+<ul>
+</ul>
+
+<% } else { %>
+<h2>This area will display your movie information.</h2>
+<ul>
+</ul>
 <% } %>
 
 <script type="text/javascript">
 	window.user = <%- user || 'null' %>;
+</script>
+
+<script type="text/javascript">
+	window.movie = <%- movie || 'null' %>;
 </script>
 
 

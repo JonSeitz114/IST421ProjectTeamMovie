@@ -7,7 +7,8 @@ req.session.lastVisit = new Date();
 res.render('index', {
 title: 'Hello and welcome fellow movie lover!',
 userFullName: req.user ? req.user.fullName : '',
-user: JSON.stringify(req.user)
+user: JSON.stringify(req.user),
+movie: JSON.stringify(req.movie)
 });
 };
 

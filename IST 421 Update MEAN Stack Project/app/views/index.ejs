@@ -180,6 +180,17 @@ text-align:center;
 </ul>
 
 <% } else { %>
+<h2>This area will display your user information.</h2>
+<ul>
+</ul>
+<% } %>
+
+<% if ( movie ) { %>
+<h2>Your movie information in JSON <%=movie%> </h2>
+<ul>
+</ul>
+
+<% } else { %>
 <h2>This area will display your movie information.</h2>
 <ul>
 </ul>
@@ -187,6 +198,10 @@ text-align:center;
 
 <script type="text/javascript">
 	window.user = <%- user || 'null' %>;
+</script>
+
+<script type="text/javascript">
+	window.movie = <%- movie || 'null' %>;
 </script>
 
 <section ng-view></section>
