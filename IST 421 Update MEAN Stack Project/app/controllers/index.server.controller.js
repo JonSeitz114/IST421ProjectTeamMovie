@@ -11,11 +11,3 @@ user: JSON.stringify(req.user),
 movie: JSON.stringify(req.movie)
 });
 };
-
-//req.session.lastVisit = new Date();
-//res.render('index', {
-//title: 'Your movie collection',
-//user: JSON.stringify(req.user),
-//movie: JSON.stringify(req.movie),
-//});
-//};

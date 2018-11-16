@@ -160,6 +160,28 @@ text-align:center;
 	objspan.innerHTML = "Congratulations on finding your way to this movie application prototype.";
 	document.body.appendChild(objspan);
 	</script>
+<br/>
+<% if ( userFullName ) { %>
+<h2>Hello <%=userFullName%> </h2>
+<ul>
+    <li><h3><a href="/signout">Sign out</a></h3></li>
+    <li><h3><a href="/create">Create Movie</a></h3></li>
+    <li><h3><a href="/view">View Movies</a></h3></li>
+    <li><h3><a href="/update">Update Movie Information</a></h3></li>
+    <li><h3><a href="/delete">Delete Movie Entry</a></h3></li>
+</ul>
+
+<% } else { %>
+<h2>To sign in and access the Movies library, click on Signin.</h2>
+<h2>If you have not created an account yet, click on Signup.</h2>
+<ul>
+    <li><h3><a href="/create">Create Movie</a></h3></li>
+    <li><h3><a href="/view">View Movies</a></h3></li>
+    <li><h3><a href="/update">Update Movie Information)</a></h3></li>
+    <li><h3><a href="/delete">Delete Movie Entry</a></h3></li>
+</ul>
+<% } %>
+
 
 <% if ( user ) { %>
 <h2>User information in JSON <%=user%> </h2>

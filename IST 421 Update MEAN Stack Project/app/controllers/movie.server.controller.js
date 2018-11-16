@@ -2,6 +2,19 @@ var mongoose = require('mongoose'),
 Movie = mongoose.model('Movie');
 
 
+exports.render = function(req, res) {
+if (req.session.lastVisit) {
+console.log(req.session.lastVisit);
+}
+req.session.lastVisit = new Date();
+res.render('movies', {
+title: 'Your movie collection',
+user: JSON.stringify(req.user),
+movie: JSON.stringify(req.movie),
+});
+};
+
+
 var getErrorMessage = function(err) {
 if (err.errors) {
 for (var errName in err.errors) {
