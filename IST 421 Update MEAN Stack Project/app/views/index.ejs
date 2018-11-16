@@ -111,6 +111,12 @@ mark {
 
 div.panel {
 	background-color: #FFF5EE;
+	position: center;
+}
+
+.movieofday{
+	background-color: tan;
+	text-align: center;
 }
 
 .forgot {
@@ -162,7 +168,7 @@ text-align:center;
 <h2>Hello <%=userFullName%> </h2>
 <ul>
 	<li><h3><a href="/signout">Sign out</a></h3></li>
-	<li><h3><a href="/movies">Go To Your Movie Collection (Coming Soon)</a></h3></li>
+	<li><h3><a href="/movies.ejs">Go To Your Movie Collection (Coming Soon)</a></h3></li>
 </ul>
 
 <% } else { %>
@@ -191,8 +197,17 @@ text-align:center;
 </ul>
 
 <% } else { %>
-<h2>This area will display your movie information.</h2>
-<ul>
+<center><h2>Movie choice of the day</h2></center>
+<ul class="movieofday">
+	<li>director" : "Brad Bird",</li>
+	<li>"genre" : "Animation, Action, Superhero",</li>
+	<li>"actors" : [
+	"Craig T. Nelson",
+	"Samuel L. Jackson",
+	"Holly Hunter"
+		],</li>
+	<li>"runtime" : "115 minutes",</li>
+	<li>"rating" : "Awesometacular"</li>
 </ul>
 <% } %>
 

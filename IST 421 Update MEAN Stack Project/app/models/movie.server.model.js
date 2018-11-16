@@ -4,12 +4,12 @@ var mongoose = require('mongoose'),
 
 var MovieSchema = new Schema({
 title: String,
-Dateofrelease: Date,
-Director: String,
-Genre: String,
-Actors: String,
-Runtime: String,
-Rating: String
+dateofrelease: Date,
+director: String,
+genre: String,
+actors: String,
+runtime: String,
+rating: String
 },
 
     {collection: 'moviecollection1'});
