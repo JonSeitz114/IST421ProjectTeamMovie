@@ -1,0 +1,87 @@
+db.moviecollection1.find().pretty()
+{
+        "_id" : ObjectId("5bd5cd39f760b4c7d526ee6c"),
+        "title" : "Die Hard",
+        "dateofrelease" : [
+                "July",
+                "20",
+                "1988"
+        ],
+        "director" : "John McTiernan",
+        "genre" : "Action",
+        "actors" : [
+                "Bruce Willis",
+                "Alan Rickman"
+        ],
+        "runtime" : "132 minutes",
+        "rating" : "Awesometacular"
+}
+{
+        "_id" : ObjectId("5bd5cde4f760b4c7d526ee6d"),
+        "title" : "Jaws",
+        "dateofrelease" : [
+                "June",
+                "20",
+                "1975"
+        ],
+        "director" : "Steven Spielberg",
+        "genre" : "Thriller",
+        "actors" : [
+                "Roy Schneider",
+                "Richard Dreyfuss, Robert Shaw"
+        ],
+        "runtime" : "124 minutes",
+        "rating" : "Awesometacular"
+}
+{
+        "_id" : ObjectId("5bd5cdfef760b4c7d526ee6f"),
+        "title" : "Shaun Of The Dead",
+        "dateofrelease" : [
+                " March ",
+                "29",
+                "2004"
+        ],
+        "director" : "Edgar Wright",
+        "genre" : "Horror, Comedy",
+        "actors" : [
+                "Simon Pegg, Nick Frost"
+        ],
+        "runtime" : "99 minutes",
+        "rating" : "Buy it on Blu-ray"
+}
+{
+        "_id" : ObjectId("5bd5cfa2f760b4c7d526ee71"),
+        "title" : "Star Wars: Episode 4 A New Hope",
+        "dateofrelease" : [
+                "May",
+                "25",
+                "1977"
+        ],
+        "director" : "George Lucas",
+        "genre" : "Science-Fiction",
+        "actors" : [
+                "Harrison Ford",
+                "Mark Hamill",
+                "Carrie Fisher"
+        ],
+        "runtime" : "121 minutes",
+        "rating" : "Awesometacular"
+}
+{
+        "_id" : ObjectId("5bd5d05cf760b4c7d526ee72"),
+        "title" : "The Incredibles",
+        "dateofrelease" : [
+                "November",
+                "5",
+                "2004"
+        ],
+        "director" : "Brad Bird",
+        "genre" : "Animation, Action, Superhero",
+        "actors" : [
+                "Craig T. Nelson",
+                "Samuel L. Jackson",
+                "Holly Hunter"
+        ],
+        "runtime" : "115 minutes",
+        "rating" : "Awesometacular"
+}
