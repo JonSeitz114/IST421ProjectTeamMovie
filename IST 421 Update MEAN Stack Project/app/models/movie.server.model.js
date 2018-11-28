@@ -1,8 +1,11 @@
 var mongoose = require('mongoose'),
 	crypto = require('crypto'),
+	ObjectId = mongoose.Schema.Types.ObjectId;
 	Schema = mongoose.Schema;
 
+
 var MovieSchema = new Schema({
+
 title: String,
 dateofrelease: Date,
 director: String,
