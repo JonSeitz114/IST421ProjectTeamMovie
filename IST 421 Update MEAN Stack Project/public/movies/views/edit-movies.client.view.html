@@ -1,0 +1,62 @@
+<section data-ng-controller="MovieController" data-nginit="findOne()">
+    <h1>New Movie</h1>
+    <form data-ng-submit="update()" novalidate>
+        <div>
+            <label for="title">Title</label>
+            <div>
+                <input type="text" data-ng-model="movie.title"
+                       id="title" placeholder="Title" required>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="dateofrelease">Date Of Release</label>
+                <div>
+                    <input type="date" data-ng-model="movie.dateofrelease" id="dateofrelease"
+                           placeholder="dateofrelease" required>
+                </div>
+            </div>
+            <div>
+                <label for="director">Director</label>
+                <div>
+                    <input type="text" data-ng-model="movie.director" id="director"
+                           placeholder="director" required>
+                </div>
+            </div>
+            <div>
+                <label for="genre">Genre</label>
+                <div>
+                    <input type="test" data-ng-model="movie.genre" id="genre"
+                           placeholder="genre" required>
+                </div>
+            </div>
+            <div>
+                <label for="actors">Actors</label>
+                <div>
+<textarea data-ng-model="movie.actors" id="actors"
+          cols="30" rows="10" placeholder="Actors"></textarea>
+                </div>
+            </div>
+            <div>
+                <label for="runtime">Movie Runtime</label>
+                <div>
+                    <input type="text" data-ng-model="movie.runtime" id="runtime"
+                           placeholder="runtime" required>
+                </div>
+            </div>
+            <div>
+                <label for="rating">Rating</label>
+                <div>
+<textarea data-ng-model="movie.rating" id="rating"
+          placeholder="Rating"></textarea>
+                </div>
+            </div>
+        <div>
+            <input type="submit" value="Update">
+        </div>
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+</section>
+

@@ -1,0 +1,60 @@
+<section data-ng-controller="MovieController">
+    <h1>New Movie</h1>
+    <form data-ng-submit="create()" novalidate>
+        <div>
+            <label for="title">Title</label>
+            <div>
+                <input type="text" data-ng-model="title" id="title"
+                       placeholder="Title" required>
+            </div>
+        </div>
+        <div>
+            <label for="dateofrelease">Date Of Release</label>
+            <div>
+                <input type="date" data-ng-model="dateofrelease" id="dateofrelease"
+                       placeholder="dateofrelease" required>
+            </div>
+        </div>
+        <div>
+            <label for="director">Director</label>
+            <div>
+                <input type="text" data-ng-model="director" id="director"
+                       placeholder="director" required>
+            </div>
+        </div>
+        <div>
+            <label for="genre">Genre</label>
+            <div>
+                <input type="test" data-ng-model="genre" id="genre"
+                       placeholder="genre" required>
+            </div>
+        </div>
+        <div>
+            <label for="actors">Actors</label>
+            <div>
+<textarea data-ng-model="actors" id="actors"
+          cols="30" rows="10" placeholder="Actors"></textarea>
+            </div>
+        </div>
+        <div>
+            <label for="runtime">Movie Runtime</label>
+            <div>
+                <input type="text" data-ng-model="runtime" id="runtime"
+                       placeholder="runtime" required>
+            </div>
+        </div>
+        <div>
+            <label for="rating">Rating</label>
+            <div>
+<textarea data-ng-model="rating" id="rating"
+          placeholder="Rating"></textarea>
+            </div>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+</section>

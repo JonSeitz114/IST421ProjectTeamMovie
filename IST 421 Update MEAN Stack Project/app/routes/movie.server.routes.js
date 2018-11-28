@@ -1,11 +1,21 @@
 module.exports = function(app) {
 
-var movies =
+var users =
+require('../../app/controllers/users.server.controller'),
+
+movies =
 require('../../app/controllers/movie.server.controller');
 
 app.route('/movies')
-.post(movies.create)
-.get(movies.list);
+.get(movies.list)
+.post(users.requiresLogin, movies.create);
+
+app.route('/movies/:movieId')
+.get(movies.read)
+//.put(users.requiresLogin, movies.hasAuthorization, movies.update)
+//.delete(users.requiresLogin, movies.hasAuthorization, movies.delete);
+
+app.param('movieId', movies.movieByID);
 
 app.route('/create')
 .post(movies.create)
@@ -22,14 +32,6 @@ app.route('/update')
 app.route('/delete')
 .post(movies.create)
 .get(movies.list);
-
-app.route('/movies/:movieId')
-.get(movies.read)
-.put(movies.update)
-.delete(movies.delete);
-app.param('movieId', movies.movieByID);
-
-app.get('/', movies.render);
 
 };
 

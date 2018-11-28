@@ -1,0 +1,22 @@
+<section data-ng-controller="MovieController" data-nginit="findOne()">
+<h1 data-ng-bind="movie.title"></h1>
+<div data-ng-show="authentication.user._id ==
+movie.creator._id">
+<a href="/#!/movies/{{movie._id}}/edit">Edit</a>
+<a href="#" data-ng-click="delete();">Delete</a>
+</div>
+<small>
+<em>Posted on</em>
+<em data-ng-bind="movie.created | date:'mediumDate'">
+</em>
+<em>by</em>
+<em data-ng-bind="movie.userFullName"></em>
+</small>
+<p data-ng-bind="movie.title"></p>
+<p data-ng-bind="movie.dateofrelease"></p>
+<p data-ng-bind="movie.director"></p>
+<p data-ng-bind="movie.genre"></p>
+<p data-ng-bind="movie.actors"></p>
+<p data-ng-bind="movie.runtime"></p>
+<p data-ng-bind="movie.rating"></p>
+</section>
