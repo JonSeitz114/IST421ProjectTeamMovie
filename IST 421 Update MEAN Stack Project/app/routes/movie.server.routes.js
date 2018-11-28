@@ -10,12 +10,16 @@ app.route('/movies')
 .get(movies.list)
 .post(users.requiresLogin, movies.create);
 
-app.route('/movies/:movieId')
+
+/*app.route('/movies/:movieId')
 .get(movies.read)
+.put(movies.update)
+.delete(movies.delete);
+
 //.put(users.requiresLogin, movies.hasAuthorization, movies.update)
 //.delete(users.requiresLogin, movies.hasAuthorization, movies.delete);
 
-app.param('movieId', movies.movieByID);
+app.param('movieId', movies.movieByID);*/
 
 app.route('/create')
 .post(movies.create)

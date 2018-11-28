@@ -43,9 +43,10 @@ res.json(movie);
 };
 
 exports.list = function(req, res) {
-Movie.find().sort('-created').populate('title', 'dateofrelease', 'director', 'genre',
-'actors','runtime','rating').exec(function(err, movies)
-{
+console.log("Working at all");
+//Movie.find().sort('-created').populate('title', 'dateofrelease', 'director', 'genre',
+//'actors','runtime','rating').exec(function(err, movies)
+Movie.find({'title': 'Jaws'}).exec(function(err, movies) {
 if (err) {
 return res.status(400).send({
 message: getErrorMessage(err)
@@ -53,6 +54,7 @@ message: getErrorMessage(err)
 } else {
 res.json(movies);
 }
+console.log("Finding" + movies);
 });
 };
 

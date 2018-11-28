@@ -27,6 +27,7 @@ $scope.error = errorResponse.data.message;
 $scope.find = function() {
 $scope.movies = Movies.query();
 };
+
 $scope.findOne = function() {
 $scope.movie = Movies.get({
 movieId: $routeParams.movieId

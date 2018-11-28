@@ -10,7 +10,7 @@ app.route('/signup')
 app.route('/signin')
 .get(users.renderSignin)
 .post(passport.authenticate('local', {
-successRedirect: '/',
+successRedirect: '/movies',
 failureRedirect: '/signin',
 failureFlash: true
 }));

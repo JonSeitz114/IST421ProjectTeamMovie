@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 
 
 var MovieSchema = new Schema({
-
+_id: ObjectId,
 title: String,
 dateofrelease: Date,
 director: String,
@@ -15,7 +15,7 @@ runtime: String,
 rating: String
 },
 
-    {collection: 'moviecollection1'});
+    {collection: 'Moviecollection1'});
 
 MovieSchema.set('toJSON', {
 getters: true,
